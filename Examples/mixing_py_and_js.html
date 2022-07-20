@@ -1,12 +1,17 @@
 <html>
+
     <head>
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     </head>
+
     <body>
+        <h1>PyScript Bi-direction Support</h1>
         <py-script>
-print('Hello, World!')
-</py-script>
+            from js import localStorage
+            localStorage.setItem("text", "hello world")
+        </py-script>
+
     </body>
 
 </html> 

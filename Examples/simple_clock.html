@@ -1,0 +1,36 @@
+!<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8"/>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+
+        <title>Simple clock demo</title>
+
+        <link rel = "stylesheet" href = "https://pyscript.net/alpha/pyscript.css" />
+
+        <script defer src = "https://pyscript.net/alpha/pyscript.js"></script>
+        <py-env>
+            - paths:
+                - ./utils.py
+        </py-env>
+            <py-config>
+                - autoclose_loader: false
+                - runtimes:
+                  - 
+                    src: "https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"
+                    name: pyodide-0.20
+                    lang: python
+            </py-config>
+    </head>
+
+    <body>
+        <div class = "font-mono">start time: <label id = "outputDiv"></label></div>
+        <div id = "outputDiv2" class = "font-mono"></div>
+        <div id = "outputDiv3" class = "font-mono"></div>
+        <py-script output = "outputDiv">
+import utils
+time = utils.now()
+print(time)
+        </py-script>
+    </body>
+</html>
