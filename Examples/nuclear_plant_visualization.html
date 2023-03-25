@@ -26,7 +26,7 @@ import json
 
 from pyodide.http import open_url
 
-location = "./assets/World_Nuclear_Power_Plant.csv"
+location = "https://raw.githubusercontent.com/dotAadarsh/Everythings-PyScript/main/assets/World_Nuclear_Power_Plant.csv"
 plant_station_locations = pd.read_csv(open_url(location))
 
 plant_station_locations = plant_station_locations[["latitude", "longitude", "powerplant"]]
